@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compation" content="ie=edge">
+    <title></title>
+    <head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    .box{
+        position: relative;
+        margin:100px auto;
+        text-align: center;
+        height: 150px;
+        width: 400px;
+        border: 3px solid black;
+        background-color: rgb(249, 224, 86);
+        border-radius: 10px;
+        transition: 1s;
+    }
+    #warn{
+        position:fixed;
+        width: 10px;
+        height: 5px;
+        transform: scale(0.06) translate(-100%, -100%);
+    }
+   .fork{
+        display:block;
+        margin:0 1px 0 auto;
+        width: 27px;
+        height: 25px;
+        cursor: pointer;
+        transition: 0.5s;
+        border-radius: 50%;
+    }
+    .fork:hover{
+        background-color: rgb(216, 17, 20);
+    }
+    .oneline{
+        display:block;
+        width: 400px;
+        margin: 0 auto;
+        font-family: 宋体;
+        color:red;
+        font-weight: bolder;
+        font-size: 30px;
+    }
+    .twoline{
+        padding-top: 15px;
+        display:block;
+        width: 400px;
+        margin: 0 auto;
+        font-family: 黑体;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+</style>
+<script>
+var btn=document.querySelector('.fork');
+var box=document.querySelector('.box');
+btn.onclick=function(){
+    box.style.display='none';
+}
+</script>
+</head>
+<body>
+<div class="box">
+    <div id="warn"><img src="./warn.png" alt="未加载成功"></div>
+    <span class="fork">✖</span>
+    <span class="oneline">警告:</span>
+    <span class="twoline"><h3>该网站存在异常行为，禁止访问</h3></span>
+</div>
+</body>
+</html>
